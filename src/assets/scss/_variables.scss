@@ -5,18 +5,6 @@
 
 // Color system
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #152C5B !default;
-$black:    #000 !default;
-
 $grays: () !default;
 $grays: map-merge(
   (
@@ -33,17 +21,6 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
-$indigo:  #3252DF !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
 $colors: () !default;
 $colors: map-merge(
   (
@@ -55,17 +32,16 @@ $colors: map-merge(
     "orange":     $orange,
     "yellow":     $yellow,
     "green":      $green,
-    "teal":       $teal,
+    "teal":       $teal, 
     "cyan":       $cyan,
     "white":      $white,
-    "gray":       $gray-600,
+    "gray":       $gray-600,     
     "gray-dark":  $gray-800
   ),
   $colors
 );
 
-$primary:       $indigo !default;
-$secondary:     $gray-600 !default;
+$primary:       $indigo !default;      
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -77,7 +53,7 @@ $theme-colors: () !default;
 $theme-colors: map-merge(
   (
     "primary":    $primary,
-    "secondary":  $secondary,
+    // "secondary":  $secondary,
     "success":    $success,
     "info":       $info,
     "warning":    $warning,
@@ -274,8 +250,9 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:      "Poppins", sans-serif !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, 
+                               "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
@@ -292,7 +269,7 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 2.625 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
