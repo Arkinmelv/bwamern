@@ -23,44 +23,45 @@ export default function star({ className, value, height, width, spacing }) {
   }
   if (decimals > 0 && value <= 5) {
     star.push(
-    <div
-      className="star"
-      key={`starWithDecimals`}
-      style={{ 
-          left: leftPos, 
-          height: height, 
-          width: decimals * width - spacing
-      }}
-    ></div>
-    );
-
-  const starPlaceholder = [];
-  for (let index = 0; index < 5; index++) {
-    starPlaceholder.push(
       <div
-        className="star placeholder"
-        key={`starPlaceholder-${index}`}
+        className="star"
+        key={`starWithDecimals`}
         style={{
-          left: index * width,
+          left: leftPos,
           height: height,
-          width: width,
-          marginRight: spacing,
+          width: decimals * width - spacing
         }}
       ></div>
     );
+
+    const starPlaceholder = [];
+    for (let index = 0; index < 5; index++) {
+      starPlaceholder.push(
+        <div
+          className="star placeholder"
+          key={`starPlaceholder-${index}`}
+          style={{
+            left: index * width,
+            height: height,
+            width: width,
+            marginRight: spacing,
+          }}
+        ></div>
+      );
+    }
+    return (
+      <>
+        <div
+          className={["stars", className].join(" ")}
+          style={{ height: height }}
+        >
+          {starPlaceholder}
+          {star}
+        </div>
+      </>
+    );
   }
-  return (
-    <>
-      <div
-        className={["stars", className].join(" ")}
-        style={{ height: height }}
-      >
-        {starPlaceholder}
-        {star}
-      </div>
-    </>
-  );
-}}
+}
 star.propTypes = {
   className: propTypes.string,
   value: propTypes.number,

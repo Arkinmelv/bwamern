@@ -2,6 +2,7 @@ import React from "react";
 import Fade from  '@stahl.luke/react-reveal';
 import Button from "elements/Button";
 import IconText from "parts/IconText";
+
 export default function Footer() {
   return (
     <Fade>
